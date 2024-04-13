@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root {
+    --background-color: #1E1E1E;
+    --green: #6FFF57;
+    --wrhite: #fff;
+    --botton-active: #3A375E;
+    --botton-disable: rgba(58, 55, 94, 0.5);
+    --content: rgba(58, 55, 94, 0.3);
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--wrhite);
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+}
+
+.title span{
+    color:var(--green);
+}
+
+.button{
+    font-family: "Chakra Petch", sans-serif;
+    background-color: var(--botton-disable);
+    color: var(--wrhite);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botton-active);
+    border-left: 4px solid var(--botton-active);
+    border-right: 4px solid var(--botton-active);
+    border-top: none;
+} 
+
+.button:first-child{
+    border-radius: 40px 40px 0 0;
+}
+
+.buttons{
+    display: block;
+}
+
+.button.active{
+    background-color: var(--botton-active);
+        border-bottom: 4px solid var(--green);
+}
+
+.aba-texts{
+    background-color: var(--content);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-content.active {
+    display: block;
+}
+
+.aba-content{
+    display: none;
+}
+
+.aba-content-main-title{
+    font-size: 28px;
+    text-align: center;
+
+}
+
+.aba-content-secundary-title{
+    text-align: center;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+.counter{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.counter-digit{
+    padding: 0 24px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.counter-digit-number{
+    font-size: 70px;
+    margin: 0;
+}
+
+.counter-digit-text{
+    color: var(--green);
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px ) {
+    .buttons{
+    display: flex;
+    }
+    .button:first-child{
+        border-radius: 40px 0 0 0;
+    }
+    .button:last-child{
+        border-radius: 0 40px 0 0;
+    }
+}
